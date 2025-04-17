@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IRCTC Railway Concession Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #eef3f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .form-box {
+      background-color: #ffffff;
+      max-width: 750px;
+      margin: auto;
+      padding: 35px 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      border-top: 5px solid #003366;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-header img {
+      height: 70px;
+      margin-bottom: 10px;
+    }
+
+    .form-header h2 {
+      color: #003366;
+      margin: 5px 0;
+    }
+
+    .form-header p {
+      color: #5a5a5a;
+      font-size: 14px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #0073e6;
+      outline: none;
+    }
+
+    .radio-group,
+    .checkbox-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 6px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button {
+      background-color: #800000;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #a00000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-box">
+    <div class="form-header">
+      <img src="image/irctc.jpg" alt="IRCTC Logo">
+      <h2>Indian Railways – Student Concession Form</h2>
+      <p>Facilitated via IRCTC - For Educational Travel Concessions Only</p>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label for="fullName">Student Full Name</label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="collegeId">College ID Number</label>
+        <input type="text" id="collegeId" name="collegeId" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email ID</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <div class="form-group">
+        <label for="class">Class of Travel</label>
+        <select id="class" name="class" required>
+          <option value="">Select Class</option>
+          <option value="SL">Sleeper (SL)</option>
+          <option value="3AC">AC 3 Tier (3A)</option>
+          <option value="2AC">AC 2 Tier (2A)</option>
+          <option value="GN">General (GN)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="Male" required> Male</label>
+          <label><input type="radio" name="gender" value="Female"> Female</label>
+          <label><input type="radio" name="gender" value="Other"> Other</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Purpose of Journey</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="purpose" value="Semester Break"> Semester Break</label>
+          <label><input type="checkbox" name="purpose" value="Home Town Visit"> Home Town Visit</label>
+          <label><input type="checkbox" name="purpose" value="Educational Tour"> Educational Tour</label>
+          <label><input type="checkbox" name="purpose" value="Internship"> Internship</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="fromStation">From Station</label>
+        <input type="text" id="fromStation" name="fromStation" required>
+      </div>
+
+      <div class="form-group">
+        <label for="toStation">To Station</label>
+        <input type="text" id="toStation" name="toStation" required>
+      </div>
+
+      <div class="form-group">
+        <label for="distance">Distance (in KM)</label>
+        <input type="number" id="distance" name="distance" min="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Additional Instructions / Comments</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="E.g., preferred date of journey, station code, special needs..."></textarea>
+      </div>
+
+      <button type="submit">Submit Concession Request</button>
+    </form>
+  </div>
+
+</body>
+</html>
